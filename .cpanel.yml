@@ -1,0 +1,7 @@
+---
+deployment:
+	tasks:
+		- export DEPLOYPATH=/home2/yaca/portalekampus.yacanet.com/
+		- /bin/cp -R dist/* $DEPLOYPATH
+		- /bin/cp dist/.htaccess $DEPLOYPATH
+		- /usr/bin/git push origin master -u
